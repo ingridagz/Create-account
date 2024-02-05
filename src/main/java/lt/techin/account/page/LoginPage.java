@@ -9,5 +9,37 @@ public class LoginPage extends BasePage{
     public LoginPage(WebDriver driver) {
         super(driver);
     }
-
+    @FindBy(css = "[class='text-decoration-none me-3']")
+    WebElement loginFirstButton;
+    @FindBy(xpath = "/html//input[@id='email']")
+    WebElement loginEmail;
+    @FindBy(xpath = "/html//input[@id='password']")
+    WebElement loginPassword;
+    @FindBy(css = "[class='btn btn-lg btn-primary d-block w-100']")
+    WebElement loginSecondButton;
+    @FindBy(css = ".btn.btn-outline-danger")
+    WebElement logoutButton;
+    @FindBy(css = "[class] .d-flex")
+    WebElement errorLoginPassword;
+    public void clickLoginFirst() {
+       loginFirstButton.click();
+    }
+    public void fillLoginEmail(String loginEmailField) {
+        loginEmail.sendKeys(loginEmailField);
+    }
+    public void fillLoginPassword(String loginPasswordField) {
+        loginPassword.sendKeys(loginPasswordField);
+    }
+    public void clickLoginSecond() {
+        loginSecondButton.click();
+    }
+    public boolean isThereLogoutButton(){
+        return logoutButton.isDisplayed();
+    }
+    public void clickLogout() {
+        logoutButton.click();
+    }
+    public String errorMessageEmail(){
+        return errorLoginPassword.getText();
+    }
 }

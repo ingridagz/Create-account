@@ -18,34 +18,47 @@ public class RegisterPage extends BasePage {
     WebElement name;
     @FindBy(xpath = "//input[@id='password']")
     WebElement password;
-    @FindBy(xpath= "//input[@id='confirmPassword']")
+    @FindBy(xpath = "//input[@id='confirmPassword']")
     WebElement confirmPassword;
     @FindBy(css = ".btn.btn-lg.btn-primary")
     WebElement registerButton;
-    @FindBy(xpath="//b[.='User account created successfully']")
-    WebElement message;
+    @FindBy(xpath = "//b[.='User account created successfully']")
+    WebElement errorRegistration;
+    @FindBy(xpath = "//form/div[1]/div[1]/div[1]/div[@class='invalid-feedback']")
+    WebElement errorEmail;
 
     public void fillEmail(String emailField) {
         eMail.sendKeys(emailField);
     }
+
     public void fillName(String nameField) {
         name.sendKeys(nameField);
     }
-   public void fillPassword(String passwordName){
+
+    public void fillPassword(String passwordName) {
         password.sendKeys(passwordName);
     }
+
     public void confirmPassword(String confirmField) {
         confirmPassword.sendKeys(confirmField);
     }
+
     public void clickRegister() {
         registerButton.click();
     }
-    public String errorMessageAppear(){
-        return message.getText();
+
+    public String errorMessageRegistration() {
+        return errorRegistration.getText();
     }
-    public String randomEmailGenerator(){
+
+    public String randomEmailGenerator() {
         Random randomGenerator = new Random();
-        int randomInt = randomGenerator.nextInt(20);
-        return ("Inga"+randomInt + "@one.lt");
+        int randomInt = randomGenerator.nextInt(50);
+        return ("Inga" + randomInt + "@one.lt");
     }
+
+    public String errorMessageEmail() {
+        return errorEmail.getText();
+    }
+
 }

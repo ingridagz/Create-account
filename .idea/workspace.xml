@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b33f605-6678-4af1-8b91-924aeb115e41" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lt/techin/account/page/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lt/techin/account/page/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lt/techin/account/page/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lt/techin/account/page/RegisterPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/lt/techin/account/test/BasePageTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/lt/techin/account/test/HomePageTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/lt/techin/account/test/RegisterPageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lt/techin/account/test/LoginPageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lt/techin/account/test/utils/RandomEmail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/techin/account/page/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/techin/account/page/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lt/techin/account/page/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/techin/account/page/RegisterPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/lt/techin/account/test/RegisterPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lt/techin/account/test/RegisterPageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,15 +39,71 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.LoginPageTest.goToLoginPage.executor": "Run",
+    "JUnit.LoginPageTest.goToLoginPageWithWrongPassword.executor": "Run",
+    "JUnit.LoginPageTest.goToRegistrationPage.executor": "Run",
+    "JUnit.RegisterPageTest.executor": "Run",
+    "JUnit.RegisterPageTest.userRegistration1.executor": "Run",
+    "JUnit.RegisterPageTest.userRegistration2.executor": "Run",
+    "JUnit.RegisterPageTest.userRegistrationWrongEmail.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Vartotojas/Desktop/prasau_neliesti/Open_login_POMgeras"
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Ingos_mokslai/Automatinis_testavimas/Create_Account"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="RegisterPageTest.userRegistration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.RegisterPageTest">
+    <configuration name="LoginPageTest.goToLoginPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lt.techin.account.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lt.techin.account.test" />
+      <option name="MAIN_CLASS_NAME" value="lt.techin.account.test.LoginPageTest" />
+      <option name="METHOD_NAME" value="goToLoginPage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginPageTest.goToLoginPageWithWrongPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lt.techin.account.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lt.techin.account.test" />
+      <option name="MAIN_CLASS_NAME" value="lt.techin.account.test.LoginPageTest" />
+      <option name="METHOD_NAME" value="goToLoginPageWithWrongPassword" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginPageTest.goToRegistrationPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lt.techin.account.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lt.techin.account.test" />
+      <option name="MAIN_CLASS_NAME" value="lt.techin.account.test.LoginPageTest" />
+      <option name="METHOD_NAME" value="goToRegistrationPage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegisterPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="untitled1" />
       <extension name="coverage">
         <pattern>
@@ -60,7 +113,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="lt.techin.account.test" />
       <option name="MAIN_CLASS_NAME" value="lt.techin.account.test.RegisterPageTest" />
-      <option name="METHOD_NAME" value="userRegistration" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegisterPageTest.userRegistration1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lt.techin.account.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lt.techin.account.test" />
+      <option name="MAIN_CLASS_NAME" value="lt.techin.account.test.RegisterPageTest" />
+      <option name="METHOD_NAME" value="userRegistration1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -81,7 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RegisterPageTest.userRegistration" />
+        <item itemvalue="JUnit.RegisterPageTest" />
+        <item itemvalue="JUnit.LoginPageTest.goToLoginPageWithWrongPassword" />
+        <item itemvalue="JUnit.LoginPageTest.goToLoginPage" />
+        <item itemvalue="JUnit.LoginPageTest.goToRegistrationPage" />
+        <item itemvalue="JUnit.RegisterPageTest.userRegistration1" />
       </list>
     </recent_temporary>
   </component>
@@ -94,6 +166,18 @@
       <option name="presentableId" value="Default" />
       <updated>1707122399311</updated>
     </task>
+    <task id="LOCAL−00001" summary="Base, Home, Register pages">
+      <option name="closed" value="true" />
+      <created>1707140938962</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1707140938962</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Base, Home, Register pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Base, Home, Register pages" />
   </component>
 </project>
