@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 public class LoginPage extends BasePage{
 
     public LoginPage(WebDriver driver) {
+
         super(driver);
     }
     @FindBy(css = "[class='text-decoration-none me-3']")
