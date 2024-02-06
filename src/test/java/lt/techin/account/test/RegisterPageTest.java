@@ -6,6 +6,11 @@ import lt.techin.account.test.utils.RandomEmail;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.openqa.selenium.By;
+
+import java.time.Duration;
 
 public class RegisterPageTest extends BasePageTest {
 
@@ -61,12 +66,28 @@ public class RegisterPageTest extends BasePageTest {
         registerPage.clickRegister();
         Assertions.assertEquals("Email address is invalid", registerPage.errorMessageEmail());
     }
+
     @Test
     void userEmptyRegistration(){
         homePage.clickCreateAccount();
 
         registerPage.clickRegister();
         Assertions.assertTrue(registerPage.isEmptyForm());
+    }
+    @ParameterizedTest
+    @CsvFileSource(resources = "/register.csv", numLinesToSkip = 1)
+    void userRegistrationWithCsvFile(String emailCsv, String nameCsv, String passwordCsv, String passwordConfirmCsv, String messageErrCsv) {
+        homePage.clickCreateAccount();
+
+        registerPage.fillEmail(emailCsv);
+        registerPage.fillName(nameCsv);
+        registerPage.fillPassword(passwordCsv);
+        registerPage.confirmPassword(passwordConfirmCsv);
+
+        registerPage.clickRegister();
+
+        Assertions.assertTrue(registerPage.isMessageCsv(messageErrCsv), "Error message: " + messageErrCsv);
+        System.out.println("Error message: " + messageErrCsv);
     }
 }
 

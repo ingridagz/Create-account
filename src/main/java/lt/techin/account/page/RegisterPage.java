@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class RegisterPage extends BasePage {
@@ -28,6 +30,8 @@ public class RegisterPage extends BasePage {
     WebElement errorEmail;
     @FindBy(xpath = "//div[@class='invalid-feedback']")
     WebElement errorEmptyRegistration;
+    @FindBy(xpath = "//div[@class='invalid-feedback']")
+    List<WebElement> registrationErrorMessages;
 
     public void fillEmail(String emailField) {
         eMail.sendKeys(emailField);
@@ -63,8 +67,17 @@ public class RegisterPage extends BasePage {
         return errorEmail.getText();
     }
 
-    public boolean isEmptyForm(){
+    public boolean isEmptyForm() {
         return errorEmptyRegistration.isDisplayed();
     }
 
+    public boolean isMessageCsv(String errorMessageText) {
+        ArrayList<String> newErrorMessages= new ArrayList<>();
+        for (WebElement errorMessage : registrationErrorMessages) {
+            newErrorMessages.add(errorMessage.getText());
+        }
+        return newErrorMessages.contains(errorMessageText);
+    }
+
 }
+
