@@ -22,6 +22,10 @@ public class LoginPage extends BasePage{
     WebElement logoutButton;
     @FindBy(css = "[class] .d-flex")
     WebElement errorLoginPassword;
+    @FindBy(xpath = "//a[@href='/notes/app/profile']")
+    WebElement profileButton;
+   @FindBy(css = "input#user-email")
+   WebElement profileEmail;
     public void clickLoginFirst() {
        loginFirstButton.click();
     }
@@ -43,4 +47,15 @@ public class LoginPage extends BasePage{
     public String errorMessageEmail(){
         return errorLoginPassword.getText();
     }
+    public void clickProfile() {
+        profileButton.click();
+    }
+
+public String getProfileEmail(){
+        return profileEmail.getAttribute("value");
+}
+
+
+
+
 }

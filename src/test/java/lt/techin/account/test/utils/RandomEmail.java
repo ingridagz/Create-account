@@ -2,6 +2,7 @@ package lt.techin.account.test.utils;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
+
 public class RandomEmail {
 
     public static String getRandomEmail() {

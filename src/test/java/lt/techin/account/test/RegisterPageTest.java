@@ -61,6 +61,13 @@ public class RegisterPageTest extends BasePageTest {
         registerPage.clickRegister();
         Assertions.assertEquals("Email address is invalid", registerPage.errorMessageEmail());
     }
+    @Test
+    void userEmptyRegistration(){
+        homePage.clickCreateAccount();
+
+        registerPage.clickRegister();
+        Assertions.assertTrue(registerPage.isEmptyForm());
+    }
 }
 
 

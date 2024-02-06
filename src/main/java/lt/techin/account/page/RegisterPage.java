@@ -26,6 +26,8 @@ public class RegisterPage extends BasePage {
     WebElement errorRegistration;
     @FindBy(xpath = "//form/div[1]/div[1]/div[1]/div[@class='invalid-feedback']")
     WebElement errorEmail;
+    @FindBy(xpath = "//div[@class='invalid-feedback']")
+    WebElement errorEmptyRegistration;
 
     public void fillEmail(String emailField) {
         eMail.sendKeys(emailField);
@@ -59,6 +61,10 @@ public class RegisterPage extends BasePage {
 
     public String errorMessageEmail() {
         return errorEmail.getText();
+    }
+
+    public boolean isEmptyForm(){
+        return errorEmptyRegistration.isDisplayed();
     }
 
 }

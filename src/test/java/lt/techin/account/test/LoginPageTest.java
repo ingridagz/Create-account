@@ -12,8 +12,8 @@ public class LoginPageTest extends BasePageTest {
     private HomePage homePage;
     private LoginPage loginPage;
     private RegisterPage registerPage;
-    private final String name="Inga";
-    private final String password="666666";
+    private final String name = "Inga";
+    private final String password = "666666";
 
     @BeforeEach
     void setUp() {
@@ -45,12 +45,13 @@ public class LoginPageTest extends BasePageTest {
 
         loginPage.clickLogout();
     }
+
     @Test
-    void goToLoginPageWithWrongPassword(){
+    void goToLoginPageWithWrongPassword() {
 
-     homePage.clickCreateAccount();
+        homePage.clickCreateAccount();
 
-    String getRandomEmail = RandomEmail.getRandomEmail();
+        String getRandomEmail = RandomEmail.getRandomEmail();
         registerPage.fillEmail(getRandomEmail);
         registerPage.fillName(name);
         registerPage.fillPassword(password);
@@ -65,4 +66,23 @@ public class LoginPageTest extends BasePageTest {
         Assertions.assertEquals("Incorrect email address or password", loginPage.errorMessageEmail());
     }
 
+    @Test
+    void goToProfileCheckEmail() {
+        homePage.clickCreateAccount();
+
+        String getRandomEmail = RandomEmail.getRandomEmail();
+        registerPage.fillEmail(getRandomEmail);
+        registerPage.fillName(name);
+        registerPage.fillPassword(password);
+        registerPage.confirmPassword(password);
+        registerPage.clickRegister();
+
+        loginPage.clickLoginFirst();
+        loginPage.fillLoginEmail(getRandomEmail);
+        loginPage.fillLoginPassword(password);
+        loginPage.clickLoginSecond();
+
+        loginPage.clickProfile();
+        Assertions.assertEquals(getRandomEmail, loginPage.getProfileEmail());
+    }
 }
